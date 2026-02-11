@@ -28,11 +28,13 @@ public class AccountServiceImpl implements IAccountService{
     }
 
     @Override
+    @Transactional
     public Account save(Account account) {
         return accountDao.save(account);
     }
 
     @Override
+    @Transactional
     public void delete(Long id) {
         accountDao.deleteById(id);
     }
